@@ -6,19 +6,23 @@ import { AppComponent } from './app.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { PersonajesComponent } from './personaje/personaje.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';  // Asegúrate de importar HttpClientModule
+import { HttpClientModule } from '@angular/common/http';
+import { PaginaNoEncontradaComponent } from './pagina-no-encontrada/pagina-no-encontrada.component';  // Asegúrate de importar HttpClientModule
+import { CapitalizePipe } from './capitalize.pipe'; // Importar la nueva pipe
 
 @NgModule({
   declarations: [
     AppComponent,
     BusquedaComponent,
-    PersonajesComponent
+    PersonajesComponent,
+    PaginaNoEncontradaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CapitalizePipe
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,11 @@
 <link rel="stylesheet" href="personaje.component.css"><!-- busqueda.component.html -->
 
 <div class="personajes-container">
-    <div *ngFor="let personaje of personajesList" class="personaje-card">
-        <img [src]="'https://ddragon.leagueoflegends.com/cdn/14.22.1/img/champion/' + personaje.image.full" [alt]="personaje.name">
-        <h3>{{ personaje.name }}</h3>
-      <p>{{ personaje.title }}</p>
-      <p>{{ personaje.blurb }}</p>
-      <p>{{ personaje.tags }}</p>
-    </div>
+  <div *ngFor="let personaje of personajesList" class="personaje-card">
+    <img [src]="'https://ddragon.leagueoflegends.com/cdn/14.22.1/img/champion/' + personaje.image.full"
+      [alt]="personaje.name | capitalize">
+    <h3>{{ personaje.name | capitalize }}</h3>
+    <p><strong>Título:</strong> {{ personaje.title }}</p>
+    <p>{{ personaje.blurb }}</p>
   </div>
-  
+</div>

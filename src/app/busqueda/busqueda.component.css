@@ -1,5 +1,35 @@
-/* Estilos para el input y el botón */
-div {
+.busqueda-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaciado entre el input y el botón */
+    margin: 20px 0;
+  }
+  
+  input {
+    padding: 8px;
+    border: 2px solid #f1c40f;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  button {
+    background-color: #f1c40f;
+    color: black;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    background-color: #cda80d;
+  }
+  div {
     display: flex;
     justify-content: center;
     align-items: center;

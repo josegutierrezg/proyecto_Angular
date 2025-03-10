@@ -1,7 +1,6 @@
 <header>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <!-- Aquí la ruta del logo es 'assets/images/logo.png' -->
       <a class="navbar-brand" href="#"><img src="logo.png" alt="logoLol"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,25 +9,21 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" routerLink="/busqueda" routerLinkActive="active">Busqueda</a>
+            <a class="nav-link active" routerLink="/busqueda" routerLinkActive="active">Búsqueda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            <a class="nav-link" routerLink="/personajes" routerLinkActive="active">Personajes</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 </header>
+
 <main>
   <router-outlet></router-outlet>
 </main>
+
 <footer>
   <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
 </footer>

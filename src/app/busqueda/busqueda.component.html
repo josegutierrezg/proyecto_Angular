@@ -1,15 +1,14 @@
-<div>
-    <input [(ngModel)]="nombre" placeholder="Ingresa el nombre del personaje" />
-    <button (click)="buscarPersonaje()">Buscar</button>
-  </div>
-  
-  <!-- Mostrar mensaje de error si es necesario -->
-  <div *ngIf="mensajeError" class="error">
-    {{ mensajeError }}
-  </div>
-  
-  <!-- Mostrar la imagen del personaje si existe -->
-  <div *ngIf="imagenPersonaje">
-    <img [src]="imagenPersonaje" alt="Imagen del personaje" />
-  </div>
-  
+<link rel="stylesheet" href="busqueda.component.css"><!-- busqueda.component.html -->
+
+<div class="busqueda-container">
+  <input [(ngModel)]="nombre" placeholder="Ingresa el nombre del personaje" />
+  <button (click)="buscarPersonaje()">Buscar</button>
+</div>
+
+<div *ngIf="mensajeError" class="error">
+  {{ mensajeError }}
+</div>
+
+<div *ngIf="imagenPersonaje">
+  <img [src]="imagenPersonaje" [alt]="nombre | capitalize" />
+</div>

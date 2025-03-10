@@ -1,4 +1,3 @@
-// personaje.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -25,18 +24,16 @@ export class PersonajeService {
 
   // Verificar si el personaje existe y devolver la URL de la imagen
   getPersonajePorNombre(nombre: string): Observable<boolean> {
-    const nombreFormateado = nombre.charAt(0).toUpperCase() + nombre.slice(1).toLowerCase();
     return this.http.get<any>(this.apiUrl).pipe(
       map(response => {
         const champions = response.data;
-        return champions.hasOwnProperty(nombreFormateado); // Verificar si el personaje existe en la API
+        return champions.hasOwnProperty(nombre); // No es necesario formatear el nombre aquí
       })
     );
   }
 
   // Método para obtener la URL de la imagen del personaje
   getPersonajesbyNombre(nombre: string): string {
-    const nombreFormateado = nombre.charAt(0).toUpperCase() + nombre.slice(1).toLowerCase();
-    return `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${nombreFormateado}_0.jpg`;
+    return `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${nombre}_0.jpg`;
   }
 }
