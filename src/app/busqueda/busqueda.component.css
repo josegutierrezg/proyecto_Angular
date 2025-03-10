@@ -1,0 +1,79 @@
+/* Estilos para el input y el botón */
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Añade un espacio de 10px entre el input y el botón */
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: 2px solid #f1c40f;
+    border-radius: 5px;
+    background-color: #333;
+    color: #f1c40f;
+    width: 80%;
+    max-width: 400px;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #000;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #f1c40f;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Estilos para el mensaje de error */
+  .error {
+    color: #e74c3c; /* Rojo para los mensajes de error */
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  /* Estilos para la imagen del personaje */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Animación de entrada para la imagen */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media Queries para hacerlo responsive */
+  @media (max-width: 768px) {
+    input[type="text"] {
+      width: 90%;
+      margin-bottom: 15px;
+    }
+  
+    button {
+      width: 90%;
+    }
+  }
+  
