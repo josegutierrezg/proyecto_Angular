@@ -1,0 +1,19 @@
+<div class="equipo-container">
+    <h2>Mi Equipo</h2>
+  
+    <div *ngIf="equipoPersonajes.length > 0; else noEquipo">
+      <div class="equipo-list">
+        <div *ngFor="let personaje of equipoPersonajes" class="personaje-en-equipo">
+          <img [src]="'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/' + personaje.id + '_0.jpg'" [alt]="personaje.name">
+          <h3>{{ personaje.name }}</h3>
+          <button (click)="eliminarPersonaje(personaje.id)">Eliminar</button>
+        </div>
+      </div>
+      <button (click)="vaciarEquipo()">Vaciar equipo</button>
+    </div>
+  
+    <ng-template #noEquipo>
+      <p>No hay personajes en el equipo.</p>
+    </ng-template>
+  </div>
+  

@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';  // Asegúrate de importar HttpClientModule
 import { CapitalizePipe } from './capitalize.pipe';
+import { EquipoComponent } from './components/equipo/equipo.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CapitalizePipe } from './capitalize.pipe';
     BusquedaComponent,
     PersonajesComponent,
     PaginaNoEncontradaComponent,
+    EquipoComponent,
   ],
   imports: [
     BrowserModule,
