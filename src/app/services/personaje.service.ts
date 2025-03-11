@@ -22,18 +22,42 @@ export class PersonajeService {
     );
   }
 
-  // Verificar si el personaje existe y devolver la URL de la imagen
+  // Buscar personaje por nombre
   getPersonajePorNombre(nombre: string): Observable<boolean> {
     return this.http.get<any>(this.apiUrl).pipe(
       map(response => {
         const champions = response.data;
-        return champions.hasOwnProperty(nombre); // No es necesario formatear el nombre aquí
+        return champions.hasOwnProperty(nombre);
       })
     );
   }
 
-  // Método para obtener la URL de la imagen del personaje
+  // Obtener la imagen del personaje
   getPersonajesbyNombre(nombre: string): string {
     return `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${nombre}_0.jpg`;
+  }
+
+  // Método para agregar un nuevo personaje (simulación local)
+  agregarPersonaje(nuevoPersonaje: PersonajeInterface): Observable<PersonajeInterface> {
+    return new Observable(observer => {
+      observer.next(nuevoPersonaje);
+      observer.complete();
+    });
+  }
+
+  // Método para actualizar un personaje (simulación local)
+  actualizarPersonaje(personajeActualizado: PersonajeInterface): Observable<PersonajeInterface> {
+    return new Observable(observer => {
+      observer.next(personajeActualizado);
+      observer.complete();
+    });
+  }
+
+  // Método para eliminar un personaje (simulación local)
+  eliminarPersonaje(nombre: string): Observable<boolean> {
+    return new Observable(observer => {
+      observer.next(true);
+      observer.complete();
+    });
   }
 }

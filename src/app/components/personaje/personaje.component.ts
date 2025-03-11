@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Importar CommonModule
 
-import { PersonajeService } from '../services/personaje.service';
-import { PersonajeInterface } from '../interfaces/personaje.interface';
+import { PersonajeService } from '../../services/personaje.service';
+import { PersonajeInterface } from '../../interfaces/personaje.interface';
 
 @Component({
   selector: 'app-personajes',

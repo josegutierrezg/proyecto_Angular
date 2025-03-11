@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PersonajeService } from '../services/personaje.service';
-import { CapitalizePipe } from '../capitalize.pipe'; // Importar el pipe
+import { PersonajeService } from '../../services/personaje.service';
+import { CapitalizePipe } from '../../capitalize.pipe'; // Importar el pipe
 
 @Component({
   selector: 'app-busqueda',
