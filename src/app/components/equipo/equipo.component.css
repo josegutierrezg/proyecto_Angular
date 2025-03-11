@@ -1,0 +1,152 @@
+/* Contenedor del equipo */
+.equipo-container {
+    background-color: #111; /* Fondo oscuro */
+    color: #f1c40f; /* Texto amarillo */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Título del equipo */
+  .equipo-container h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #f39c12;
+    text-transform: uppercase;
+  }
+  
+  /* Contenedor de personajes con CSS Grid */
+  .equipo-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas en una fila */
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Estilos para cada personaje dentro del equipo */
+  .personaje-en-equipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Imagen del personaje */
+  .personaje-en-equipo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Efecto hover en la imagen */
+  .personaje-en-equipo img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Nombre del personaje */
+  .personaje-en-equipo h3 {
+    font-size: 18px;
+    color: #f1c40f;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+  }
+  
+  /* Efecto hover en el nombre */
+  .personaje-en-equipo h3:hover {
+    color: #f39c12;
+  }
+  
+  /* Botón para eliminar un personaje */
+  .personaje-en-equipo button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Efecto hover en el botón */
+  .personaje-en-equipo button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+  }
+  
+  /* Botón para vaciar el equipo */
+  .equipo-container button {
+    background-color: #f1c40f;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Efecto hover en el botón de vaciar equipo */
+  .equipo-container button:hover {
+    background-color: #f39c12;
+    transform: scale(1.05);
+  }
+  
+  /* Mensaje cuando no hay personajes en el equipo */
+  .equipo-container p {
+    font-size: 18px;
+    color: #f1c40f;
+    margin-top: 15px;
+  }
+  
+  /* Diseño responsivo */
+  @media (max-width: 900px) {
+    .equipo-list {
+      grid-template-columns: repeat(3, 1fr); /* 3 personajes por fila en pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .equipo-list {
+      grid-template-columns: repeat(2, 1fr); /* 2 personajes por fila en pantallas pequeñas */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .equipo-list {
+      grid-template-columns: repeat(1, 1fr); /* 1 personaje por fila en móviles */
+    }
+  }
+  

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { PersonajeService } from '../../services/personaje.service';
-import { CapitalizePipe } from '../../capitalize.pipe'; // Importar el pipe
+import { CapitalizePipe } from '../../capitalize.pipe';
 
 @Component({
   selector: 'app-busqueda',
   templateUrl: './busqueda.component.html',
   styleUrls: ['./busqueda.component.css'],
   standalone: false,
-  providers: [CapitalizePipe] // Agregar el pipe como provider
+  providers: [CapitalizePipe]
 })
 export class BusquedaComponent {
   nombre: string = '';
@@ -17,7 +17,7 @@ export class BusquedaComponent {
   constructor(private personajeService: PersonajeService, private capitalizePipe: CapitalizePipe) {}
 
   buscarPersonaje(): void {
-    const nombreFormateado = this.capitalizePipe.transform(this.nombre); // Aplicar el pipe
+    const nombreFormateado = this.capitalizePipe.transform(this.nombre); // Aplico el pipe
     this.imagenPersonaje = this.personajeService.getPersonajesbyNombre(nombreFormateado);
 
     this.personajeService.getPersonajePorNombre(nombreFormateado).subscribe(existe => {

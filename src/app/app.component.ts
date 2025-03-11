@@ -11,10 +11,10 @@ export class AppComponent {
   title = 'practicaAngularJose';
   
   // Propiedades necesarias para el funcionamiento de la búsqueda
-  nombre: string = ''; // Variable vinculada con ngModel
-  mensajeError: string = ''; // Variable para el mensaje de error
-  imagenPersonaje: string | null = null; // URL de la imagen del personaje
-  personajes: any[] = []; // Lista de personajes encontrados
+  nombre: string = '';
+  mensajeError: string = '';
+  imagenPersonaje: string | null = null;
+  personajes: any[] = [];
 
   constructor(private personajeService: PersonajeService) {}
 

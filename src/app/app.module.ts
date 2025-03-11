@@ -7,7 +7,7 @@ import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { PersonajesComponent } from './components/personaje/personaje.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';  // Asegúrate de importar HttpClientModule
+import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
 import { CapitalizePipe } from './capitalize.pipe';
 import { EquipoComponent } from './components/equipo/equipo.component';
 

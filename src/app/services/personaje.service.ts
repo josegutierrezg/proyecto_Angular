@@ -17,7 +17,7 @@ export class PersonajeService {
     return this.http.get<any>(this.apiUrl).pipe(
       map(response => {
         const champions = response.data;
-        return Object.keys(champions).map(key => champions[key]); // Convertir objeto en array
+        return Object.keys(champions).map(key => champions[key]); // Convierto objeto en array
       })
     );
   }
